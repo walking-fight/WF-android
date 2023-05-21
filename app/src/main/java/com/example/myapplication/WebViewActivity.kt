@@ -20,7 +20,7 @@ class WebViewActivity : AppCompatActivity() {
         webView.apply {
             settings.javaScriptEnabled = true
             webViewClient = WebViewClient()
-            loadUrl("https://your-react-project-url.com")
+            loadUrl("http://10.110.151.76:3000")
         }
     }
 
