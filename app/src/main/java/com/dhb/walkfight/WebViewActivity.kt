@@ -1,10 +1,10 @@
-package com.DHB.walkfight
+package com.dhb.walkfight
 
 import android.os.Bundle
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.R
+import com.dhb.walkfight.R
 
 class WebViewActivity : AppCompatActivity() {
     private lateinit var webView: WebView
@@ -21,7 +21,7 @@ class WebViewActivity : AppCompatActivity() {
         webView.apply {
             settings.javaScriptEnabled = true
             webViewClient = WebViewClient()
-            loadUrl("http://172.30.1.4:3000")
+            loadUrl(BuildConfig.WEB_APP_URL)
         }
     }
 

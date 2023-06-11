@@ -1,4 +1,4 @@
-package com.DHB.walkfight
+package com.dhb.walkfight
 
 import org.junit.Test
 

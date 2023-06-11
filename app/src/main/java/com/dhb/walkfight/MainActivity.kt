@@ -1,10 +1,10 @@
-package com.DHB.walkfight
+package com.dhb.walkfight
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
 import android.widget.Button
-import com.example.myapplication.R
+import com.dhb.walkfight.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

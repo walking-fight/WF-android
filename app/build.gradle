@@ -3,16 +3,21 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
-    namespace 'com.DHB.walkfight'
+    namespace 'com.dhb.walkfight'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.DHB.walkfight"
+        applicationId "com.dhb.walkfight"
         minSdk 21
         targetSdk 32
         versionCode 1
         versionName "1.0"
+
+        buildConfigField('String', 'WEB_APP_URL', properties.getProperty("url.webApp"))
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
