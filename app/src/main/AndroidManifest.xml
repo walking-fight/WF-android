@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".WalkFight"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,6 +18,21 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <cateogry android:name="android.intent.category.DEFAULT" />
+                <cateogry android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="@string/kakao_redirection_scheme" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name="com.dhb.walkfight.WebViewActivity"
             android:exported="false">
             <meta-data
@@ -28,10 +44,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <data
-                    android:host="oauth"
-                    android:scheme="kakao1d7bfef00f79df36741d6b32b85e4491" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
