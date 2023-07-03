@@ -24,8 +24,8 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
-                <cateogry android:name="android.intent.category.DEFAULT" />
-                <cateogry android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
                     android:host="oauth"
